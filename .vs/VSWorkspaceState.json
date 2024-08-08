@@ -4,8 +4,11 @@
     "\\angular-app",
     "\\angular-app\\src",
     "\\angular-app\\src\\app",
-    "\\Server\\routes"
+    "\\angular-app\\src\\app\\Components",
+    "\\angular-app\\src\\app\\Components\\home",
+    "\\Server",
+    "\\Server\\Database"
   ],
-  "SelectedNode": "\\angular-app\\src\\app\\app.module.ts",
+  "SelectedNode": "\\Server\\api.js",
   "PreviewInSolutionExplorer": false
 }

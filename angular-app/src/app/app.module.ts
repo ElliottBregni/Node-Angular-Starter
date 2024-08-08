@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
@@ -8,17 +9,33 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { NavMenuComponent } from './navmenu/navmenu.component';
-import { HomeComponent } from './home/home.component';
+import { CalendarComponent } from './Components/calendar/calendar.component';
+import { NavMenuComponent } from './Components/navmenu/navmenu.component';
+import { HomeComponent } from './Components/home/home.component';
 import { RouterModule } from '@angular/router';
+
+import 'flatpickr/dist/flatpickr.css';
+//import { SearchComponent } from './Components/search/search.component';
+//import { UserComponent } from './Components/user/user.component';
+//import { ArticleComponent } from './Components/article/article.component';
+//import { LoginComponent } from './Components/login/login.component';
+//import { ArticleCommentComponent } from './Components/article/article-comment/article-comment.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
     HomeComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    //SearchComponent,
+    //UserComponent,
+    //ArticleComponent,
+    //LoginComponent,
+   //ArticleCommentComponent,
+
+   
   ],
   imports: [
 
@@ -37,9 +54,8 @@ import { RouterModule } from '@angular/router';
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'calendar', component: CalendarComponent },
-      { path: '**', redirectTo: 'home' },
-      { path: '**', redirectTo: 'home' }
-    ])
+    ]),
+     BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
